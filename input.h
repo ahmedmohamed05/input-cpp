@@ -43,7 +43,7 @@ readNumber(std::string msg, std::string errMsg = "Invalid number\n") {
 template <typename T>
 typename std::enable_if<
     std::is_arithmetic<T>::value && !std::is_same<T, char>::value, T>::type
-readNumberInRange(T min, T max, std::string msg,
+readNumberInRange( std::string msg,T min, T max,
                   std::string outOfRangeMsg = "Number out of range\n",
                   std::string errMsg = "Enter a NUMBER\n") {
   T n;
